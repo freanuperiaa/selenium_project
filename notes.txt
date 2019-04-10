@@ -1,0 +1,31 @@
+
+- first step for selenium is to open a driver. In my case I used chrome.
+>   driver = webdriver.Chrome()
+    ^problem with this is that, you need to install Chromedriver  first (used sudo)
+
+
+--------------LOCATING AN ELEMENT----------------------------------------------
+    (everything at https://www.seleniumhq.org/docs/03_webdriver.jsp)
+---By ID -- locating an element in an html page.
+> element = driver.find_element_by_id('name_of_id')
+            OR
+> from selenium.webdriver.common.by import By
+> element = driver.find_element(by=By.ID, value='name_of_id')
+
+
+---By Class Name
+> cheeses = driver.find_element_by_class_name('cheese')
+            OR
+> from selenium.webdriver.common.by import By
+> cheeses = driver.find_elements(By.CLASS_NAME, 'cheese')
+
+
+---By Tag Name
+> frame = driver.find_element_by_tag_name('iframe')
+            OR
+> from selenium.webdriver.common.by import By
+> frame = driver.find_element(By.TAG_NAME, 'iframe')
+
+
+ALL OF THE OTHER THINGS THAT YOU NEED TO LOOK FOR IS AT THE LINK ABOVE!!!
+
